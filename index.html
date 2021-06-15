@@ -12,7 +12,7 @@
     <style></style>
   </head>
   <body>
-    <h1>Simple Typewriter Exercise</h1>
+    <h1>gross simpsons</h1>
     <p id="para-0"></p>
     <p id="para-1"></p>
     <p id="para-2"></p>
@@ -30,20 +30,16 @@
       function addLetter() {
         if (paraCounter < text.length) {
           const para = document.getElementById("para-" + paraCounter);
-          para.innerHTML = text[paraCounter].slice(
-            0,
-            charCounter + 1
-          );
+          para.innerHTML = text[paraCounter].slice(0, charCounter + 1);
           charCounter++;
           if (charCounter >= text[paraCounter].length) {
             paraCounter++;
             charCounter = 0;
           }
-        }
-        else {
-          clearInterval(typeWriterInterval);
-        }
-        
+       else {
+          paraCounter = 0;
+          charCounter = 0;
+            
       }
       typeWriterInterval = setInterval(addLetter, 100);
     </script>
